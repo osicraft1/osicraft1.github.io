@@ -736,6 +736,71 @@ main { overflow-x: hidden; }
 
 
 /*-----------------------------------*\
+ * #VENTURES
+\*-----------------------------------*/
+
+.ventures { padding-block: var(--section-padding); }
+
+.ventures-list {
+  display: grid;
+  gap: 30px;
+}
+
+.venture-card {
+  background: var(--bg-secondary);
+  height: 100%;
+  padding: 30px 25px;
+  border-radius: var(--radius-12);
+  box-shadow: var(--shadow-1);
+  transition: var(--transition-1);
+}
+
+.venture-card:is(:hover, :focus-within) { transform: translateY(-5px); }
+
+.venture-card .card-icon {
+  background: var(--raw-seinna);
+  color: var(--white);
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.venture-role {
+  color: var(--raw-seinna);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.venture-card .card-title { margin-bottom: 12px; }
+
+.venture-card .card-text {
+  color: var(--color-secondary);
+  line-height: 1.7;
+}
+
+.venture-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--raw-seinna);
+  font-weight: var(--fw-700);
+  margin-top: 18px;
+}
+
+.venture-link:is(:hover, :focus) { text-decoration: underline; }
+
+
+
+
+
+/*-----------------------------------*\
  * #CONTACT
 \*-----------------------------------*/
 
@@ -1214,6 +1279,14 @@ textarea.input-field {
   .stats-list { grid-template-columns: repeat(3, 1fr); }
 
   .stats-card { height: 100%; }
+
+
+
+  /**
+   * VENTURES
+   */
+
+  .ventures-list { grid-template-columns: repeat(3, 1fr); }
 
 
 
