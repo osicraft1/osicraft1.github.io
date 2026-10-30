@@ -645,13 +645,47 @@ main { overflow-x: hidden; }
 .skill-card {
   position: relative;
   background: var(--bg-secondary);
-  width: 80px;
-  height: 80px;
-  display: grid;
-  place-items: center;
+  width: 104px;
+  height: 104px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
   border-radius: var(--radius-12);
   box-shadow: var(--shadow-1);
-  cursor: help;
+  transition: var(--transition-1);
+}
+
+.skill-card:hover { transform: translateY(-4px); }
+
+.skill-card img,
+.skill-card .skill-ion {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.skill-card .skill-ion { font-size: 40px; }
+
+.skill-card img.wide { width: 62px; }
+
+.skill-ion.power-bi { color: hsl(48, 89%, 51%); }
+
+.skill-ion.tableau { color: hsl(214, 58%, 32%); }
+
+body.dark_theme .skill-ion.tableau { color: hsl(214, 70%, 65%); }
+
+body.dark_theme .skill-card img.invert-dark { filter: invert(1); }
+
+.skill-name {
+  color: var(--color-primary);
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-700);
+  text-align: center;
+  line-height: 1.2;
 }
 
 .skill-card:hover .tooltip {
